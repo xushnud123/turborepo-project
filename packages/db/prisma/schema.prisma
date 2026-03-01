@@ -1,0 +1,38 @@
+
+
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "library" // 💡 Mana shu qatorni qo'shing
+}
+
+datasource db {
+  provider = "postgresql"
+}
+// prisma/schema.prisma
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  createdAt DateTime @default(now())
+  password  String
+
+  products  Product[]
+
+  @@map("users")
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  price       Float
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // 💡 Productni Userga bog'laydigan maydonlar
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("products")
+}

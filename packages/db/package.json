@@ -1,0 +1,23 @@
+{
+  "name": "@my-app/db",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "studio": "dotenv -e ../../.env -- prisma studio",
+    "migrate": "dotenv -e ../../.env -- bunx prisma migrate dev",
+    "generate": "dotenv -e ../../.env -- bunx prisma generate"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.4.1",
+    "@prisma/client": "^7.4.1",
+    "dotenv": "^17.3.1",
+    "prisma": "^7.4.2"
+  }
+}

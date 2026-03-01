@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    // ... boshqa sozlamalar
+    "baseUrl": ".",
+    "paths": {
+      "@my-app/shared": ["../../packages/shared/src/index.ts"]
+    },
+    "target": "ESNext",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true, // 👈 Mana shu qatorni qo'shing
+    "skipLibCheck": true, // 👈 Bu ham kerak bo'lishi mumkin
+    "strict": true
+  }
+}
