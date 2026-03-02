@@ -7,5 +7,3 @@ export const appRouter = router({
   auth: authRouter,
   products: productsRouter,
 });
-
-export type AppRouter = typeof appRouter;
