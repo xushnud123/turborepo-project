@@ -21,7 +21,7 @@ Loyiha ikkita asosiy qismdan iborat:
 ```text
 ├── apps/
 │   ├── server/          # Express + tRPC API server
-│   └── web/             # Frontend (Vite/Next.js)
+│   └── web/             # Frontend (Vite/React js)
 ├── packages/
 │   ├── db/              # Prisma schema va Client (Database layer)
 │   └── zod/             # Umumiy validatsiya sxemalari
