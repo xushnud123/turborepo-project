@@ -1,1 +1,0 @@
-import{w as e,p as s,O as a}from"./chunk-EPOLDU6W-CNuB5XRQ.js";const r=()=>s.jsx("div",{className:"min-h-screen bg-gray-50 flex",children:s.jsx("main",{className:"flex-1 flex flex-col",children:s.jsx(a,{})})}),t=e(r);export{t as default};

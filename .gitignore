@@ -7,3 +7,5 @@ out/
 build/
 .vite/
 .prisma/
+
+.turbo
