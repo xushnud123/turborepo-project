@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "dotenv -e ./.env -- turbo dev",
-    "build": "dotenv -e ./.env -- turbo build"
+    "build": "dotenv -e ./.env -- turbo build --filter=...[HEAD^1]"
   },
   "keywords": [],
   "author": "",
