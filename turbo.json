@@ -6,7 +6,8 @@
       "persistent": true
     },
     "build": {
-      "outputs": ["dist/**", ".vite/**"]
+      "outputs": ["dist/**", ".vite/**", ".prisma/client/**"],
+      "dependsOn": ["^build"]
     }
   },
   "globalEnv": [".env"]

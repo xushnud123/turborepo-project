@@ -2,9 +2,6 @@
   "compilerOptions": {
     // ... boshqa sozlamalar
     "baseUrl": ".",
-    "paths": {
-      "@my-app/shared": ["../../packages/shared/src/index.ts"]
-    },
     "target": "ESNext",
     "module": "esnext",
     "moduleResolution": "Node",

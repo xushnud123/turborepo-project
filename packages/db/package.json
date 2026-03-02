@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "build": "dotenv -e ../../.env -- prisma generate",
     "studio": "dotenv -e ../../.env -- prisma studio",
     "migrate": "dotenv -e ../../.env -- bunx prisma migrate dev",
     "generate": "dotenv -e ../../.env -- bunx prisma generate"

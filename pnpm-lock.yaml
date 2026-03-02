@@ -17,9 +17,12 @@ importers:
 
   apps/client:
     dependencies:
-      '@my-app/shared':
+      '@my-app/trpc':
         specifier: workspace:*
-        version: link:../../packages/shared
+        version: link:../../packages/trpc
+      '@my-app/zod':
+        specifier: workspace:*
+        version: link:../../packages/zod
       '@react-router/node':
         specifier: 7.12.0
         version: 7.12.0(react-router@7.12.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
@@ -38,6 +41,12 @@ importers:
       add:
         specifier: ^2.0.6
         version: 2.0.6
+      ag-grid-community:
+        specifier: ^35.1.0
+        version: 35.1.0
+      ag-grid-react:
+        specifier: ^35.1.0
+        version: 35.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -102,9 +111,9 @@ importers:
       '@my-app/db':
         specifier: workspace:*
         version: link:../../packages/db
-      '@my-app/shared':
+      '@my-app/zod':
         specifier: workspace:*
-        version: link:../../packages/shared
+        version: link:../../packages/zod
       '@trpc/server':
         specifier: ^11.10.0
         version: 11.10.0(typescript@5.9.3)
@@ -152,10 +161,10 @@ importers:
   packages/db:
     dependencies:
       '@prisma/adapter-pg':
-        specifier: ^7.4.2
+        specifier: ^7.4.1
         version: 7.4.2
       '@prisma/client':
-        specifier: ^7.4.2
+        specifier: ^7.4.1
         version: 7.4.2(prisma@7.4.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3))(typescript@5.9.3)
       dotenv:
         specifier: ^17.3.1
@@ -171,7 +180,26 @@ importers:
         specifier: latest
         version: 1.3.9
 
-  packages/shared:
+  packages/trpc:
+    dependencies:
+      '@my-app/db':
+        specifier: workspace:*
+        version: link:../db
+      '@trpc/server':
+        specifier: ^11.10.0
+        version: 11.10.0(typescript@5.9.3)
+      jsonwebtoken:
+        specifier: ^9.0.3
+        version: 9.0.3
+      zod:
+        specifier: ^4.3.6
+        version: 4.3.6
+    devDependencies:
+      '@types/jsonwebtoken':
+        specifier: ^9.0.10
+        version: 9.0.10
+
+  packages/zod:
     dependencies:
       zod:
         specifier: ^4.3.6
@@ -964,6 +992,18 @@ packages:
   add@2.0.6:
     resolution: {integrity: sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==}
 
+  ag-charts-types@13.1.0:
+    resolution: {integrity: sha512-DytRM3CXli+Y013SC1Mr8lQBrhVTACK+11ilDHOhwUM0sRpmGuR51XFGcBKOliW1Vas1AycP31Cm3Pp0jx3hqw==}
+
+  ag-grid-community@35.1.0:
+    resolution: {integrity: sha512-yWFQfRNjv3KUBkHHzFdDOYGjPcDMU0B8Up4qG651diFlGRUGEGVs94SK73niWvk1FDZdpV9oWrwq3f30/qAoVg==}
+
+  ag-grid-react@35.1.0:
+    resolution: {integrity: sha512-n8pJh4RTpos8stzz91nEhTCZZdLy9bjQYAGxIxJ8ocVagnEsAk9T5Vz/VEKUhOGz36il68n7TVbVWSuUA3a+mg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
 
@@ -1532,6 +1572,10 @@ packages:
   long@5.3.2:
     resolution: {integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==}
 
+  loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
@@ -1783,6 +1827,9 @@ packages:
       typescript:
         optional: true
 
+  prop-types@15.8.1:
+    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
+
   proper-lockfile@4.1.2:
     resolution: {integrity: sha512-TjNPblN4BwAWMXU8s9AEz4JmQxnD1NNL7bNOY/AKUzyamc379FWASUhc/K1pL2noVb+XmZKLL68cjzLsiOAMaA==}
 
@@ -1826,6 +1873,9 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
+
+  react-is@16.13.1:
+    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
   react-refresh@0.14.2:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
@@ -2920,6 +2970,19 @@ snapshots:
 
   add@2.0.6: {}
 
+  ag-charts-types@13.1.0: {}
+
+  ag-grid-community@35.1.0:
+    dependencies:
+      ag-charts-types: 13.1.0
+
+  ag-grid-react@35.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+    dependencies:
+      ag-grid-community: 35.1.0
+      prop-types: 15.8.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
   arg@5.0.2: {}
 
   array-flatten@1.1.1: {}
@@ -3524,6 +3587,10 @@ snapshots:
 
   long@5.3.2: {}
 
+  loose-envify@1.4.0:
+    dependencies:
+      js-tokens: 4.0.0
+
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
@@ -3733,6 +3800,12 @@ snapshots:
       - react
       - react-dom
 
+  prop-types@15.8.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+
   proper-lockfile@4.1.2:
     dependencies:
       graceful-fs: 4.2.11
@@ -3783,6 +3856,8 @@ snapshots:
   react-hook-form@7.71.2(react@19.2.4):
     dependencies:
       react: 19.2.4
+
+  react-is@16.13.1: {}
 
   react-refresh@0.14.2: {}
 

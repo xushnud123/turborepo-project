@@ -1,0 +1,15 @@
+
+
+> @my-app/db@ build /Users/xushnudbekraimov/Desktop/trpc-turbo/packages/db
+> dotenv -e ../../.env -- prisma generate
+
+[2mLoaded Prisma config from prisma.config.ts.
+[22m
+[2mPrisma schema loaded from prisma/schema.prisma.[22m
+
+
+✔ Generated [1mPrisma Client[22m (v7.4.2)[2m to ./../../node_modules/.pnpm/@prisma+client@7.4.2_prisma@7.4.2_@types+react@19.2.14_react-dom@19.2.4_react@19.2.4__r_49b4b128965f74ea9bbd7586bc0c7d7a/node_modules/@prisma/client[22m in 73ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+

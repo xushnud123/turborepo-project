@@ -12,7 +12,7 @@
     "apps/client": {
       "name": "client",
       "dependencies": {
-        "@my-app/shared": "workspace:*",
+        "@my-app/trpc": "workspace:*",
         "@my-app/zod": "workspace:*",
         "@react-router/node": "7.12.0",
         "@react-router/serve": "7.12.0",
@@ -50,7 +50,6 @@
       "version": "1.0.0",
       "dependencies": {
         "@my-app/db": "workspace:*",
-        "@my-app/shared": "workspace:*",
         "@my-app/zod": "workspace:*",
         "@trpc/server": "^11.10.0",
         "@types/jsonwebtoken": "^9.0.10",
@@ -85,10 +84,11 @@
         "typescript": "^5",
       },
     },
-    "packages/shared": {
-      "name": "@my-app/shared",
+    "packages/trpc": {
+      "name": "@my-app/trpc",
       "version": "1.0.0",
       "dependencies": {
+        "@trpc/server": "^11.10.0",
         "zod": "^4.3.6",
       },
     },
@@ -241,7 +241,7 @@
 
     "@my-app/db": ["@my-app/db@workspace:packages/db"],
 
-    "@my-app/shared": ["@my-app/shared@workspace:packages/shared"],
+    "@my-app/trpc": ["@my-app/trpc@workspace:packages/trpc"],
 
     "@my-app/zod": ["@my-app/zod@workspace:packages/zod"],
 

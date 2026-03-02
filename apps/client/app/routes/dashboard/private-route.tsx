@@ -12,8 +12,6 @@ const PrivateRoute: FC<PrivateRouteProps> = ({ children }) => {
   const user = getUser();
   const hydrated = useHydrated();
 
-  console.log("user", user);
-
   if (!hydrated)
     return (
       <div className="min-h-screen grid place-items-center bg-slate-100">

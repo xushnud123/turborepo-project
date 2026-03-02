@@ -13,7 +13,7 @@ const LoginPage = () => {
   const { mutate, isPending } = trpc.auth.login.useMutation({
     onSuccess(data) {
       setUser(data);
-      navigate("/dashboard", { replace: true });
+      navigate("/dashboard/personal", { replace: true });
     },
   });
   const { register, handleSubmit } = useForm<Inputs>();

@@ -18,7 +18,7 @@ const Register = () => {
     onSuccess(data) {
       console.log(data);
       setUser(data);
-      navigate("/dashboard", { replace: true });
+      navigate("/dashboard/personal", { replace: true });
     },
   });
 

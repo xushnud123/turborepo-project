@@ -9,7 +9,6 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@my-app/shared": "workspace:*",
     "@my-app/zod": "workspace:*",
     "@react-router/node": "7.12.0",
     "@react-router/serve": "7.12.0",
